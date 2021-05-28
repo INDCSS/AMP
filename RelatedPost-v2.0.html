@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='https://www.blogger.com/img/logo_blogger_40px.png' rel='icon' type='image/x-icon'/>
+<title>Related Post AMP v2.0</title>
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap' rel='stylesheet'>
+<style type='text/css'>
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+body{background:0 0;margin:0;padding:0;color:#333;font-family:-apple-system,BlinkMacSystemFont,"Open Sans","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}
+a{text-decoration:none;transition:all .17 ease}
+#related-post{position:relative;float:left;width:100%}
+.related-wrap{position:relative;float:left;width:100%;white-space:nowrap;overflow:auto hidden}
+.related-item{position:relative;display:inline-block;width:225px;white-space:normal;margin:0 12px 0 0}
+[dir=rtl] .related-item{margin:0 0 0 12px}
+.entry-image-wrap{position:relative;display:block;width:100%;height:130px;overflow:hidden;border-radius:6px}
+.entry-image-wrap .entry-thumb{display:block;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
+.entry-title{display:block;display:-webkit-box;color:#15161a;font-family:"Open Sans", Arial, sans-serif;font-size:15px;font-weight:600;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin:5px 0}
+[dir=rtl] .entry-title{font-family:"Tajawal", Arial, sans-serif}
+</style>
+</head>
+<body>
+<div id="related-post" class="related-post"></div>
+<script type='text/javascript'>
+/*! Related Post Widget for Blogger AMP by Taufik Nurrohman => http://gplus.to/tovic Modified By IDNCSS */
+function getQueryVariable(e){for(var t=window.location.search.substring(1).split("&"),a=0;a<t.length;a++){var r=t[a].split("=");if(r[0]==e)return r[1]}return!1}function generateCss(e){var t=document.createElement("style"),a=document.getElementById("related-post"),r=a.parentNode;t.type="text/css",t.styleSheet?t.styleSheet.cssText=e:t.appendChild(document.createTextNode(e)),r.insertBefore(t,a)}generateCss(".related-wrap .entry-title {font-size:"+getQueryVariable("fontSize")+";color:#"+getQueryVariable("color")+"}");var labelArray=[getQueryVariable("label")],dir=[getQueryVariable("dir")],relatedPostConfig={homePage:getQueryVariable("url"),widgetStyle:2},randomRelatedIndex,showRelatedPost;!function(e,t,a){var r={widgetTitle:"",widgetStyle:1,homePage:"http://https://www.blogger.com/",numPosts:6,titleLength:"auto",thumbnailSize:300,noImage:"//4.bp.blogspot.com/-eALXtf-Ljts/WrQYAbzcPUI/AAAAAAAABjY/vptx-N2H46oFbiCqbSe2JgVSlHhyl0MwQCK4BGAYYCw/s300/nth-idn.png",containerId:"related-post",newTabLink:!1,callBack:function(){}};for(var n in relatedPostConfig)r[n]="undefined"==relatedPostConfig[n]?r[n]:relatedPostConfig[n];var l=function(e){var r=t.createElement("script");r.type="text/javascript",r.src=e,a.appendChild(r)},i=function(e,t){return Math.floor(Math.random()*(t-e+1))+e},o=function(e){var t,a,r=e.length;if(0===r)return!1;for(;--r;)t=Math.floor(Math.random()*(r+1)),a=e[r],e[r]=e[t],e[t]=a;return e},s="object"==typeof labelArray&&labelArray.length>0?"/-/"+o(labelArray)[0]:"",d=function(e){var t=e.feed.openSearch$totalResults.$t-r.numPosts,a=i(1,t>0?t:1);l(r.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+s+"?alt=json-in-script&orderby=updated&start-index="+a+"&max-results="+r.numPosts+"&callback=showRelatedPost")},c=function(e){var t,a,n,l,i=document.getElementById(r.containerId),s=o(e.feed.entry),d=r.widgetStyle,c=r.widgetTitle+'<div class="related-wrap" dir="'+dir+'">',u=r.newTabLink?' target="_blank"':"";if(i){for(var g=0;g<r.numPosts&&g!=s.length;g++){a=s[g].title.$t,n="auto"!==r.titleLength&&r.titleLength<a.length?a.substring(0,r.titleLength)+"":a,l="media$thumbnail"in s[g]&&r.thumbnailSize!==!1?s[g].media$thumbnail.url.replace(/.*?:\/\//g,"//").replace(/\/s[0-9]+(\-c)?/,"/s"+r.thumbnailSize):r.noImage;for(var m=0,h=s[g].link.length;h>m;m++)t="alternate"==s[g].link[m].rel?s[g].link[m].href:"#";c+=2==d?'<div class="related-item"><a class="entry-image-wrap" href="'+t+'" title="'+a+'"'+u+'><span class="entry-thumb" style="background-image:url('+l+')"></span></a><a class="entry-title" title="'+a+'" href="'+t+'"'+u+">"+n+"</a></div>":'<div class="related-item"><a class="entry-title" title="title="'+a+'" href="'+t+'"'+u+">"+n+"</a></div>"}i.innerHTML=c+="</div>",r.callBack()}};randomRelatedIndex=d,showRelatedPost=c,l(r.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+s+"?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")}(window,document,document.getElementsByTagName("head")[0]);
+</script>
+</body>
+</html>
